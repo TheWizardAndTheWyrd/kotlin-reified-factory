@@ -5,17 +5,17 @@ import clients.BaseClient
 import clients.FooClient
 
 object ClientFactory {
-    inline fun <reified T : BaseClient> create() : Any? {
+    inline fun <reified T : BaseClient> create() : BaseClient? {
 
         return when (T::class) {
             BarClient::class -> {
                 createMessage<T>()
-                return Any()
+                return BarClient()
             }
 
             FooClient::class -> {
                 createMessage<T>()
-                return Any()
+                return FooClient()
             }
 
             else -> null
@@ -23,6 +23,6 @@ object ClientFactory {
     }
 
     inline fun <reified T : BaseClient> createMessage() {
-        System.out.print("Creating ${T::class}")
+        System.out.println("Creating ${T::class}")
     }
 }

@@ -1,4 +1,5 @@
 package clients
 
-open class BaseClient {
+abstract class BaseClient {
+    abstract fun contractMethod()
 }

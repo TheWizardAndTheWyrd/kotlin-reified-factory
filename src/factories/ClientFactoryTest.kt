@@ -4,7 +4,6 @@ import clients.BarClient
 import clients.FooClient
 import factories.ClientFactory.create
 import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
 class ClientFactoryTest {
@@ -14,6 +13,7 @@ class ClientFactoryTest {
         val barClient = create<BarClient>()
 
         Assertions.assertNotNull(barClient)
+        barClient!!.contractMethod()
     }
 
     @Test
@@ -21,5 +21,6 @@ class ClientFactoryTest {
         val fooClient = create<FooClient>()
 
         Assertions.assertNotNull(fooClient)
+        fooClient!!.contractMethod()
     }
 }
