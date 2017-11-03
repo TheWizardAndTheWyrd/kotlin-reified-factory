@@ -24,3 +24,7 @@ Singleton object with a `::create()` method to create implementations of `BaseCl
 ## Testing
 
 There is a `JUnit` test in `ClientFactoryTest`.
+
+## License
+
+Released under the `MIT License`.
